@@ -1,0 +1,4 @@
+3
+rahim 10
+karim 20
+bablu 30
