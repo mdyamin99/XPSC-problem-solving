@@ -1,4 +1,8 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<string>
+#include<map>
+#include<algorithm>
 #define ll long long int
 #define endl '\n'
 #define all(x) x.begin(),x.end()
