@@ -18,7 +18,7 @@ int main()
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    int l=0,r=0,ans=0;
+    ll l=0,r=0,ans=0;
     ll sum=0;
     while(n>r){
         sum+=v[r];
