@@ -14,14 +14,15 @@ int main()
 
     ll n,c;
     cin>>n>>c;
-    vector<ll> v(n);
+    vector<int> v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    ll l=0,r=0,sum=0,ans=0;
+    int l=0,r=0,ans=0;
+    ll sum=0;
     while(n>r){
         sum+=v[r];
-        if(sum>=c){
+        if(sum<=c){
             ans+=(r-l+1);
         }
         else{
