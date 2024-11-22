@@ -12,8 +12,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    ll n,c;
-    cin>>n>>c;
+    ll n,k;
+    cin>>n>>k;
     vector<ll> v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
@@ -21,18 +21,11 @@ int main()
     ll l=0,r=0,sum=0,ans=0;
     while(n>r){
         sum+=v[r];
-        if(sum>=c){
-            ans+=(r-l+1);
-        }
-        else{
-           while(sum>c && l<=r){
+        while(sum>=k && l<=r){
             sum-=v[l];
             l++;
-           }
-           if(sum <= c){
-            ans+=(r-l+1);
-           }
         }
+        ans+=l;
         r++;
     }
     cout<<ans<<endl;
