@@ -21,27 +21,14 @@ int main()
         for(int i=0;i<n;i++){
             cin>>v[i];
         }
-        string s;
-        cin>>s;
-        int l=0,r=0;
+        ll sum=0,cnt=0;
+        int mx=0;
         for(int i=0;i<n;i++){
-            l=i,r=i;
-            if(s[i]=='L') break;
+            sum+=v[i];
+            mx=max(mx,v[i]);
+            if(sum-mx==mx) cnt++;
         }
-        ll sum=0,ans=0;
-        while(n>r){
-            if(s[r]=='L'){
-                sum=0;
-                for(int i=r;s[i] != 'R';i++){
-                    sum+=v[i];
-                }
-            }
-            if(s[r]=='R'){
-                ans+=sum;
-            }
-            r++;
-        }
-        cout<<ans<<endl;
+        cout<<cnt<<endl;
     }
     return 0;
 }
