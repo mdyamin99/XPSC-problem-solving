@@ -12,9 +12,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int a,b;
-    cin>>a>>b;
-    int sum=a+b;
-    cout<<sum<<endl;
+    for(int i=0;i<500;i++){
+        cout<<"Oii"<<endl;
+    }
     return 0;
 }
